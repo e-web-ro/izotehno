@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { PriceEstimator } from "@/components/price-estimator";
@@ -122,6 +123,68 @@ export default function Home() {
               Vezi →
             </div>
           </Link>
+        </div>
+      </Container>
+
+      {/* About */}
+      <Container className="py-12">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">
+              Despre noi
+            </div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-900 md:text-4xl">
+              Izolații cu spumă poliuretanică, făcute corect
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-zinc-600">
+              Suntem o echipă cu experiență în lucrări de izolații cu spumă
+              poliuretanică (celulă deschisă și celulă închisă). Ne concentrăm pe
+              execuție curată, etanșare bună și o comunicare rapidă cu clientul.
+            </p>
+            <p className="mt-3 text-sm leading-6 text-zinc-600">
+              Acoperim frecvent zona <span className="font-semibold text-zinc-900">Buzău</span>,
+              <span className="font-semibold text-zinc-900"> Vrancea</span> și
+              localități din jur (Râmnicu Sărat, Focșani, Adjud, Galați, Brăila),
+              dar <span className="font-semibold text-zinc-900">ne deplasăm și în toată țara</span>{" "}
+              pentru proiecte potrivite.
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/servicii"
+                className="inline-flex items-center justify-center rounded-2xl border border-black/10 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+              >
+                Vezi servicii
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-emerald-700 hover:to-sky-700"
+              >
+                Contact rapid
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6">
+            <div className="relative overflow-hidden rounded-[28px] border border-black/5 bg-zinc-100 shadow-sm">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/poza-16.jpg"
+                  alt="Izolație cu spumă poliuretanică — Izotehno"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent p-5">
+                <div className="text-sm font-semibold text-white">
+                  Lucrări reale din portofoliu
+                </div>
+                <div className="mt-1 text-xs text-white/85">
+                  Vezi mai multe în secțiunea Portofoliu.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
 

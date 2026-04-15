@@ -35,11 +35,6 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-black" href="/blog">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link className="hover:text-black" href="/calculator">
                   Calculator estimativ
                 </Link>
@@ -107,7 +102,18 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-black/5 pt-6 text-xs text-zinc-500 md:flex-row md:items-center md:justify-between">
-          <div>© {year} Izotehno. Toate drepturile rezervate.</div>
+          <div>
+            © {year} Izotehno. Toate drepturile rezervate.{" "}
+            <span className="text-zinc-400">•</span>{" "}
+            <a
+              className="font-semibold text-zinc-600 hover:text-black"
+              href="https://e-web.ro/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Site realizat de e-web.ro
+            </a>
+          </div>
           <div className="flex gap-4">
             <Link className="hover:text-black" href="/politica-confidentialitate">
               Politica de confidențialitate
