@@ -1,65 +1,131 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Container } from "@/components/container";
+import { PriceEstimator } from "@/components/price-estimator";
+import { PortfolioStrip } from "@/components/portfolio-strip";
+
+function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+    </svg>
+  );
+}
+
+function SparkIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M5 2l1.5 5L12 9l-5.5 2L5 16l-1.5-5L-2 9l5.5-2L5 2Zm14 6 1.1 3.7L24 13l-3.9 1.3L19 18l-1.1-3.7L14 13l3.9-1.3L19 8ZM10 12l1.6 5.3L17 19l-5.4 1.7L10 26l-1.6-5.3L3 19l5.4-1.7L10 12Z" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-white">
+      {/* Hero */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-teal-500 to-sky-600">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -left-24 -top-24 size-[360px] rounded-full bg-white/30 blur-3xl" />
+          <div className="absolute -bottom-32 -right-24 size-[420px] rounded-full bg-white/25 blur-3xl" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <Container className="relative py-14 md:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div className="text-white">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
+                <SparkIcon className="size-4" />
+                Ofertă rapidă pe WhatsApp (Marian / Ana)
+              </div>
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
+                Izolații cu spumă poliuretanică, fără bătăi de cap
+              </h1>
+              <p className="mt-4 max-w-xl text-base leading-7 text-white/90">
+                Alegi tipul (celulă deschisă/închisă), grosimea și suprafața. Îți dăm
+                estimare instant și oferte rapide.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/calculator"
+                  className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-white/90"
+                >
+                  Calculator de preț
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/15"
+                >
+                  Contact rapid
+                </Link>
+              </div>
+
+              <div className="mt-8 grid gap-2 text-sm text-white/90 sm:grid-cols-2">
+                <div className="inline-flex items-center gap-2">
+                  <CheckIcon className="size-5" /> Aplicare rapidă
+                </div>
+                <div className="inline-flex items-center gap-2">
+                  <CheckIcon className="size-5" /> Etanșare excelentă
+                </div>
+                <div className="inline-flex items-center gap-2">
+                  <CheckIcon className="size-5" /> Pierderi termice reduse
+                </div>
+                <div className="inline-flex items-center gap-2">
+                  <CheckIcon className="size-5" /> Estimare transparentă
+                </div>
+              </div>
+            </div>
+
+            <PriceEstimator compact />
+          </div>
+        </Container>
+      </div>
+
+      {/* Quick actions */}
+      <Container className="py-12">
+        <div className="grid gap-4 lg:grid-cols-3">
+          <Link
+            href="/calculator"
+            className="rounded-[28px] border border-black/5 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm hover:shadow-md"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="text-sm font-semibold text-zinc-900">
+              Calculator de preț
+            </div>
+            <div className="mt-1 text-sm text-zinc-600">
+              Estimare instant minim/maxim.
+            </div>
+            <div className="mt-4 text-sm font-semibold text-emerald-700">
+              Deschide →
+            </div>
+          </Link>
+
+          <Link
+            href="/contact"
+            className="rounded-[28px] border border-black/5 bg-gradient-to-br from-sky-50 to-white p-6 shadow-sm hover:shadow-md"
           >
-            Documentation
-          </a>
+            <div className="text-sm font-semibold text-zinc-900">Contact rapid</div>
+            <div className="mt-1 text-sm text-zinc-600">
+              Marian sau Ana, direct pe WhatsApp.
+            </div>
+            <div className="mt-4 text-sm font-semibold text-sky-700">
+              Contactează →
+            </div>
+          </Link>
+
+          <Link
+            href="/portofoliu"
+            className="rounded-[28px] border border-black/5 bg-gradient-to-br from-teal-50 to-white p-6 shadow-sm hover:shadow-md"
+          >
+            <div className="text-sm font-semibold text-zinc-900">Portofoliu</div>
+            <div className="mt-1 text-sm text-zinc-600">
+              Exemple (demo acum, înlocuim cu ale tale).
+            </div>
+            <div className="mt-4 text-sm font-semibold text-teal-700">
+              Vezi →
+            </div>
+          </Link>
         </div>
-      </main>
+      </Container>
+
+      <PortfolioStrip />
     </div>
   );
 }
