@@ -48,7 +48,7 @@ export function PortfolioStrip() {
 
   return (
     <section className="bg-white">
-      <Container className="py-12">
+      <Container className="py-10 sm:py-12">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">
@@ -98,7 +98,7 @@ export function PortfolioStrip() {
               <Link
                 key={`${src}-${idx}`}
                 href="/portofoliu"
-                className="group relative h-[220px] w-[320px] flex-none overflow-hidden rounded-[28px] border border-black/5 bg-zinc-100 shadow-sm sm:h-[240px] sm:w-[360px]"
+                className="group relative h-[200px] w-[280px] flex-none overflow-hidden rounded-[28px] border border-black/5 bg-zinc-100 shadow-sm sm:h-[240px] sm:w-[360px]"
               >
                 <Image
                   src={src}

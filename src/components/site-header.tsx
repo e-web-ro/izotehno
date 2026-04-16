@@ -45,17 +45,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/70 backdrop-blur">
-      <Container className="flex h-20 items-center justify-between gap-4 md:h-24">
+      <Container className="flex h-16 items-center justify-between gap-3 md:h-24 md:gap-4">
         <Link
           href="/"
           className="inline-flex items-center gap-2 font-semibold tracking-tight"
         >
-          <span className="relative h-14 w-[240px] md:h-16 md:w-[320px]">
+          <span className="relative h-10 w-[190px] sm:h-12 sm:w-[220px] md:h-16 md:w-[320px]">
             <Image
               src="/logo.png"
               alt="Izotehno"
               fill
-              sizes="(max-width: 768px) 240px, 320px"
+              sizes="(max-width: 640px) 190px, (max-width: 768px) 220px, 320px"
               priority
               className="object-contain"
             />

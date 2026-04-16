@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { CONTACT_NUMBERS, whatsappHref } from "@/components/whatsapp";
@@ -114,13 +115,48 @@ export function SiteFooter() {
               Site realizat de e-web.ro
             </a>
           </div>
-          <div className="flex gap-4">
-            <Link className="hover:text-black" href="/politica-confidentialitate">
-              Politica de confidențialitate
-            </Link>
-            <Link className="hover:text-black" href="/termeni">
-              Termeni
-            </Link>
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+            <div className="flex gap-4">
+              <Link className="hover:text-black" href="/politica-confidentialitate">
+                Politica de confidențialitate
+              </Link>
+              <Link className="hover:text-black" href="/termeni">
+                Termeni
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://anpc.ro/ce-este-sal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 hover:bg-zinc-50"
+                aria-label="ANPC SAL"
+              >
+                <Image
+                  src="/250x50_icon_ANPC-SAL.webp"
+                  alt="ANPC SAL"
+                  width={250}
+                  height={50}
+                  className="h-6 w-auto sm:h-7"
+                />
+              </a>
+              <a
+                href="https://ec.europa.eu/consumers/odr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 hover:bg-zinc-50"
+                aria-label="ANPC SOL (ODR)"
+              >
+                <Image
+                  src="/250x50_icon_ANPC-SOL.webp"
+                  alt="ANPC SOL"
+                  width={250}
+                  height={50}
+                  className="h-6 w-auto sm:h-7"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </Container>

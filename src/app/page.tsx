@@ -29,14 +29,14 @@ export default function Home() {
           <div className="absolute -left-24 -top-24 size-[360px] rounded-full bg-white/30 blur-3xl" />
           <div className="absolute -bottom-32 -right-24 size-[420px] rounded-full bg-white/25 blur-3xl" />
         </div>
-        <Container className="relative py-14 md:py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+        <Container className="relative py-10 sm:py-12 md:py-20">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
             <div className="text-white">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
                 <SparkIcon className="size-4" />
                 Ofertă rapidă pe WhatsApp (Marian / Ana)
               </div>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl md:text-6xl">
                 Izolații cu spumă poliuretanică, fără bătăi de cap
               </h1>
               <p className="mt-4 max-w-xl text-base leading-7 text-white/90">
@@ -44,7 +44,7 @@ export default function Home() {
                 estimare instant și oferte rapide.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/calculator"
                   className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-white/90"
@@ -59,7 +59,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mt-8 grid gap-2 text-sm text-white/90 sm:grid-cols-2">
+              <div className="mt-6 grid gap-2 text-sm text-white/90 sm:grid-cols-2">
                 <div className="inline-flex items-center gap-2">
                   <CheckIcon className="size-5" /> Aplicare rapidă
                 </div>
@@ -81,7 +81,7 @@ export default function Home() {
       </div>
 
       {/* Quick actions */}
-      <Container className="py-12">
+      <Container className="py-10 sm:py-12">
         <div className="grid gap-4 lg:grid-cols-3">
           <Link
             href="/calculator"
@@ -127,7 +127,7 @@ export default function Home() {
       </Container>
 
       {/* About */}
-      <Container className="py-12">
+      <Container className="py-10 sm:py-12">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">

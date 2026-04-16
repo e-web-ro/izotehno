@@ -40,7 +40,7 @@ export function QuickContact() {
   }, [open]);
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed bottom-5 right-5 z-50 pb-[env(safe-area-inset-bottom)]">
       <div className="relative">
         {open ? (
           <div className="absolute bottom-14 right-0 w-64 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-lg">
@@ -79,7 +79,7 @@ export function QuickContact() {
           aria-haspopup="menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="grid size-12 place-items-center rounded-2xl bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700"
+          className="grid size-12 place-items-center rounded-2xl bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 active:scale-[0.98]"
         >
           <WhatsAppIcon className="size-6" />
         </button>
