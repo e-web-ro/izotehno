@@ -44,12 +44,9 @@ export function SiteHeader() {
     "Bună! Vreau o ofertă pentru izolație cu spumă poliuretanică. Suprafața este aproximativ ___ m², grosime ___ cm, locația ___.";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/70 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between gap-3 md:h-24 md:gap-4">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 font-semibold tracking-tight"
-        >
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/95 backdrop-blur-sm">
+      <Container className="flex h-16 items-center justify-between gap-3 md:h-20">
+        <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
           <span className="relative h-10 w-[190px] sm:h-12 sm:w-[220px] md:h-16 md:w-[320px]">
             <Image
               src="/logo.png"
@@ -71,10 +68,10 @@ export function SiteHeader() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={[
-                  "rounded-xl px-3 py-2 text-sm font-semibold transition-colors",
+                  "rounded-2xl px-4 py-2 text-sm font-semibold transition",
                   active
-                    ? "bg-gradient-to-r from-emerald-600 to-sky-600 text-white"
-                    : "text-zinc-700 hover:bg-zinc-100",
+                    ? "bg-gradient-to-r from-emerald-600 to-sky-600 text-white shadow-sm"
+                    : "text-slate-700 hover:bg-slate-100",
                 ].join(" ")}
               >
                 {item.label}
@@ -87,17 +84,17 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
-            className="grid size-11 place-items-center rounded-2xl border border-black/10 bg-white text-zinc-900 hover:bg-zinc-50 md:hidden"
+            className="grid h-11 w-11 place-items-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 md:hidden"
             aria-label={mobileOpen ? "Închide meniul" : "Deschide meniul"}
             aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <XIcon className="size-6" /> : <MenuIcon className="size-6" />}
+            {mobileOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
           </button>
           <Link
             href={whatsappHref(primary.e164, text)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:from-emerald-700 hover:to-sky-700 md:inline-flex"
+            className="hidden rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:from-emerald-700 hover:to-sky-700 md:inline-flex"
           >
             Cere ofertă
           </Link>
@@ -105,7 +102,7 @@ export function SiteHeader() {
       </Container>
 
       {mobileOpen ? (
-        <div className="border-t border-black/5 bg-white md:hidden">
+        <div className="border-t border-slate-200 bg-white md:hidden">
           <Container className="py-3">
             <div className="grid gap-2">
               {nav.map((item) => {
@@ -116,10 +113,10 @@ export function SiteHeader() {
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={[
-                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold",
+                      "flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold transition",
                       active
                         ? "bg-gradient-to-r from-emerald-600 to-sky-600 text-white"
-                        : "bg-zinc-50 text-zinc-900",
+                        : "bg-slate-50 text-slate-900 hover:bg-slate-100",
                     ].join(" ")}
                   >
                     {item.label}
@@ -132,7 +129,7 @@ export function SiteHeader() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="mt-1 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-4 py-3 text-sm font-semibold text-white"
+                className="mt-2 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-4 py-3 text-sm font-semibold text-white"
               >
                 Cere ofertă pe WhatsApp
               </Link>

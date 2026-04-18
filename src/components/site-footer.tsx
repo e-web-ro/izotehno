@@ -11,37 +11,36 @@ export function SiteFooter() {
     "Bună! Vreau o ofertă pentru izolație cu spumă poliuretanică. Suprafața este aproximativ ___ m², grosime ___ cm, locația ___.";
 
   return (
-    <footer className="border-t border-black/5 bg-white">
-      <Container className="py-10">
-        <div className="grid gap-8 md:grid-cols-3">
+    <footer className="border-t border-slate-200 bg-white">
+      <Container className="py-12">
+        <div className="grid gap-10 md:grid-cols-3">
           <div className="space-y-3">
-            <div className="text-lg font-semibold tracking-tight">Izotehno</div>
-            <p className="text-sm leading-6 text-zinc-600">
-              Izolații cu spumă poliuretanică pentru locuințe și industrial. Ofertă
-              rapidă, consultanță și execuție profesionistă.
+            <div className="text-lg font-semibold tracking-tight text-slate-900">Izotehno</div>
+            <p className="text-sm leading-6 text-slate-600">
+              Izolații cu spumă poliuretanică pentru locuințe și industrial. Ofertă rapidă, consultanță și execuție profesionistă.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="text-sm font-semibold">Pagini</div>
-            <ul className="grid gap-2 text-sm text-zinc-600">
+            <div className="text-sm font-semibold text-slate-900">Link-uri utile</div>
+            <ul className="grid gap-2 text-sm text-slate-600">
               <li>
-                <Link className="hover:text-black" href="/servicii">
+                <Link className="transition hover:text-slate-900" href="/servicii">
                   Servicii
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-black" href="/portofoliu">
+                <Link className="transition hover:text-slate-900" href="/portofoliu">
                   Portofoliu
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-black" href="/calculator">
+                <Link className="transition hover:text-slate-900" href="/calculator">
                   Calculator estimativ
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-black" href="/contact">
+                <Link className="transition hover:text-slate-900" href="/contact">
                   Contact
                 </Link>
               </li>
@@ -49,28 +48,28 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-3">
-            <div className="text-sm font-semibold">Contact</div>
-            <ul className="grid gap-2 text-sm text-zinc-600">
+            <div className="text-sm font-semibold text-slate-900">Contact</div>
+            <ul className="grid gap-2 text-sm text-slate-600">
               <li>
-                <span className="font-medium text-zinc-900">Telefon:</span>{" "}
-                <a className="hover:text-black" href="tel:+40763889348">
+                <span className="font-medium text-slate-900">Telefon:</span>{" "}
+                <a className="transition hover:text-slate-900" href="tel:+40763889348">
                   0763 889 348
                 </a>
                 {" · "}
-                <a className="hover:text-black" href="tel:+40762710101">
+                <a className="transition hover:text-slate-900" href="tel:+40762710101">
                   0762 710 101
                 </a>
               </li>
               <li>
-                <span className="font-medium text-zinc-900">Email:</span>{" "}
-                <a className="hover:text-black" href="mailto:oferta@izotehno.ro">
+                <span className="font-medium text-slate-900">Email:</span>{" "}
+                <a className="transition hover:text-slate-900" href="mailto:oferta@izotehno.ro">
                   oferta@izotehno.ro
                 </a>
               </li>
               <li className="pt-1">
-                <span className="font-medium text-zinc-900">WhatsApp:</span>{" "}
+                <span className="font-medium text-slate-900">WhatsApp:</span>{" "}
                 <a
-                  className="hover:text-black"
+                  className="transition hover:text-slate-900"
                   href={whatsappHref(CONTACT_NUMBERS[0].e164, text)}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -79,7 +78,7 @@ export function SiteFooter() {
                 </a>
                 {" · "}
                 <a
-                  className="hover:text-black"
+                  className="transition hover:text-slate-900"
                   href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -88,9 +87,9 @@ export function SiteFooter() {
                 </a>
               </li>
               <li className="pt-1">
-                <span className="font-medium text-zinc-900">Facebook:</span>{" "}
+                <span className="font-medium text-slate-900">Facebook:</span>{" "}
                 <a
-                  className="hover:text-black"
+                  className="transition hover:text-slate-900"
                   href="https://www.facebook.com/profile.php?id=61573306575903"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -102,12 +101,12 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-black/5 pt-6 text-xs text-zinc-500 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
           <div>
-            © {year} Izotehno. Toate drepturile rezervate.{" "}
-            <span className="text-zinc-400">•</span>{" "}
+            © {year} Izotehno. Toate drepturile rezervate. {" "}
+            <span className="text-slate-300">•</span>{" "}
             <a
-              className="font-semibold text-zinc-600 hover:text-black"
+              className="font-semibold text-slate-700 transition hover:text-slate-900"
               href="https://e-web.ro/"
               target="_blank"
               rel="noopener noreferrer"
@@ -115,12 +114,13 @@ export function SiteFooter() {
               Site realizat de e-web.ro
             </a>
           </div>
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
-            <div className="flex gap-4">
-              <Link className="hover:text-black" href="/politica-confidentialitate">
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex flex-wrap gap-4">
+              <Link className="transition hover:text-slate-900" href="/politica-confidentialitate">
                 Politica de confidențialitate
               </Link>
-              <Link className="hover:text-black" href="/termeni">
+              <Link className="transition hover:text-slate-900" href="/termeni">
                 Termeni
               </Link>
             </div>
@@ -130,7 +130,7 @@ export function SiteFooter() {
                 href="https://anpc.ro/ce-este-sal/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 hover:bg-zinc-50"
+                className="inline-flex items-center rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 hover:bg-slate-100"
                 aria-label="ANPC SAL"
               >
                 <Image
@@ -138,14 +138,14 @@ export function SiteFooter() {
                   alt="ANPC SAL"
                   width={250}
                   height={50}
-                  className="h-6 w-auto sm:h-7"
+                  className="h-7 w-auto"
                 />
               </a>
               <a
                 href="https://ec.europa.eu/consumers/odr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-xl border border-black/10 bg-white px-3 py-2 hover:bg-zinc-50"
+                className="inline-flex items-center rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 hover:bg-slate-100"
                 aria-label="ANPC SOL (ODR)"
               >
                 <Image
@@ -153,7 +153,7 @@ export function SiteFooter() {
                   alt="ANPC SOL"
                   width={250}
                   height={50}
-                  className="h-6 w-auto sm:h-7"
+                  className="h-7 w-auto"
                 />
               </a>
             </div>
