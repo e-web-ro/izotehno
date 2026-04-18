@@ -15,7 +15,7 @@ export const PRICING: Record<
     subtitle:
       "Mai moale, respiră, excelentă pentru izolare fonică și termică la interior.",
     options: [
-      { cm: 10, minRonPerM2: 45, maxRonPerM2: 70 },
+      { cm: 10, minRonPerM2: 50, maxRonPerM2: 85 },
       { cm: 15, minRonPerM2: 60, maxRonPerM2: 85 },
       { cm: 20, minRonPerM2: 75, maxRonPerM2: 95 },
       { cm: 25, minRonPerM2: 85, maxRonPerM2: 105 },
