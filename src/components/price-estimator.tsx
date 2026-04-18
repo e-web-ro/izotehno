@@ -110,7 +110,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
 
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
         <label className="grid gap-2">
-          <span className="text-xs font-semibold text-zinc-800">Suprafață (m²)</span>
+          <span className="text-xs font-semibold text-zinc-800 break-words">Suprafață (m²)</span>
           <input
             inputMode="decimal"
             value={areaText}
@@ -121,7 +121,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </label>
 
         <label className="grid gap-2">
-          <span className="text-xs font-semibold text-zinc-800">Grosime</span>
+          <span className="text-xs font-semibold text-zinc-800 break-words">Grosime</span>
           <select
             value={String(thickness)}
             onChange={(e) => setThickness(Number(e.target.value))}
@@ -138,7 +138,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
 
       <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
         <label className="grid gap-2">
-          <span className="text-xs font-semibold text-zinc-800">Județ</span>
+          <span className="text-xs font-semibold text-zinc-800 break-words">Județ</span>
           <input
             value={county}
             onChange={(e) => setCounty(e.target.value)}
@@ -147,7 +147,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
           />
         </label>
         <label className="grid gap-2">
-          <span className="text-xs font-semibold text-zinc-800">Localitate</span>
+          <span className="text-xs font-semibold text-zinc-800 break-words">Localitate</span>
           <input
             value={locality}
             onChange={(e) => setLocality(e.target.value)}
