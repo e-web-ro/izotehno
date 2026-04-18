@@ -74,7 +74,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[32px] border border-white/10 bg-white/10 p-4 shadow-2xl shadow-black/10 backdrop-blur-sm">
+            <div className="min-w-0 rounded-[32px] border border-white/10 bg-white/10 p-4 shadow-2xl shadow-black/10 backdrop-blur-sm">
               <PriceEstimator compact />
             </div>
           </div>

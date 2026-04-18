@@ -57,8 +57,8 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
   return (
     <div
       className={[
-        "rounded-[28px] border border-black/5 bg-white p-6 text-zinc-900 shadow-xl shadow-black/10",
-        compact ? "p-5" : "",
+        "min-w-0 w-full rounded-[28px] border border-black/5 bg-white text-zinc-900 shadow-xl shadow-black/10",
+        compact ? "p-4 sm:p-6" : "p-6",
       ]
         .filter(Boolean)
         .join(" ")}
@@ -79,7 +79,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </Link>
       </div>
 
-      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2">
+      <div className="mt-4 grid min-w-0 grid-cols-2 gap-2 sm:gap-3 sm:grid-cols-2">
         <button
           type="button"
           onClick={() => setFoamType("open")}
@@ -108,24 +108,24 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </button>
       </div>
 
-      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <label className="grid gap-2">
+      <div className="mt-4 grid min-w-0 grid-cols-1 gap-2 sm:gap-3 sm:grid-cols-2">
+        <label className="grid min-w-0 gap-2">
           <span className="text-xs font-semibold text-zinc-800 break-words">Suprafață (m²)</span>
           <input
             inputMode="decimal"
             value={areaText}
             onChange={(e) => setAreaText(e.target.value)}
             placeholder="ex: 120"
-            className="h-11 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
+            className="h-11 w-full min-w-0 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
           />
         </label>
 
-        <label className="grid gap-2">
+        <label className="grid min-w-0 gap-2">
           <span className="text-xs font-semibold text-zinc-800 break-words">Grosime</span>
           <select
             value={String(thickness)}
             onChange={(e) => setThickness(Number(e.target.value))}
-            className="h-11 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
+            className="h-11 w-full min-w-0 max-w-full rounded-2xl border border-black/10 bg-white px-3 text-xs sm:px-4 sm:text-sm text-zinc-900 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
           >
             {options.map((o) => (
               <option key={o.cm} value={o.cm}>
@@ -136,45 +136,45 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </label>
       </div>
 
-      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <label className="grid gap-2">
+      <div className="mt-3 grid min-w-0 grid-cols-1 gap-2 sm:gap-3 sm:grid-cols-2">
+        <label className="grid min-w-0 gap-2">
           <span className="text-xs font-semibold text-zinc-800 break-words">Județ</span>
           <input
             value={county}
             onChange={(e) => setCounty(e.target.value)}
             placeholder="ex: Bihor"
-            className="h-11 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
+            className="h-11 w-full min-w-0 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
           />
         </label>
-        <label className="grid gap-2">
+        <label className="grid min-w-0 gap-2">
           <span className="text-xs font-semibold text-zinc-800 break-words">Localitate</span>
           <input
             value={locality}
             onChange={(e) => setLocality(e.target.value)}
             placeholder="ex: Oradea"
-            className="h-11 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
+            className="h-11 w-full min-w-0 rounded-2xl border border-black/10 bg-white px-4 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
           />
         </label>
       </div>
 
-      <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div className="mt-5 grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2">
         <div className="rounded-2xl bg-zinc-50 p-4">
-          <div className="text-xs font-semibold text-zinc-700">RON/mp</div>
-          <div className="mt-2 text-2xl font-semibold tracking-tight text-zinc-900">
+          <div className="text-xs font-semibold text-zinc-700 break-words">RON/mp</div>
+          <div className="mt-2 text-lg sm:text-2xl font-semibold tracking-tight text-zinc-900 break-words">
             {selected
               ? `${formatRon(selected.minRonPerM2)}–${formatRon(selected.maxRonPerM2)}`
               : "—"}
           </div>
         </div>
         <div className="rounded-2xl bg-zinc-50 p-4">
-          <div className="text-xs font-semibold text-zinc-700">Total (RON)</div>
-          <div className="mt-2 text-2xl font-semibold tracking-tight text-zinc-900">
+          <div className="text-xs font-semibold text-zinc-700 break-words">Total (RON)</div>
+          <div className="mt-2 text-lg sm:text-2xl font-semibold tracking-tight text-zinc-900 break-words">
             {selected ? `${formatRon(minTotal)}–${formatRon(maxTotal)}` : "—"}
           </div>
         </div>
       </div>
 
-      <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      <div className="mt-5 grid min-w-0 grid-cols-1 gap-2 sm:gap-3 sm:grid-cols-2">
         <Link
           href={whatsappHref(CONTACT_NUMBERS[0].e164, message)}
           target="_blank"
