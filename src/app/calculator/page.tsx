@@ -240,7 +240,7 @@ export default function CalculatorPage() {
                       {thickness} cm
                     </div>
                   </div>
-                  <div className="mt-3 grid gap-2 sm:grid-cols-4">
+                  <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
                     {options.map((o) => {
                       const active = o.cm === thickness;
                       return (
@@ -280,7 +280,7 @@ export default function CalculatorPage() {
                       {area || 0} m²
                     </div>
                   </div>
-                  <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_160px] sm:items-center">
+                  <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-[1fr_160px] sm:items-center">
                     <input
                       type="range"
                       min={0}
@@ -302,7 +302,7 @@ export default function CalculatorPage() {
                 </div>
 
                 {/* Location */}
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <label className="grid gap-2">
                     <span className="text-sm font-semibold text-zinc-900">
                       Județ

@@ -79,7 +79,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </Link>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2">
         <button
           type="button"
           onClick={() => setFoamType("open")}
@@ -108,7 +108,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </button>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
         <label className="grid gap-2">
           <span className="text-xs font-semibold text-zinc-800">Suprafață (m²)</span>
           <input
@@ -136,7 +136,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </label>
       </div>
 
-      <div className="mt-3 grid gap-3 sm:grid-cols-2">
+      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
         <label className="grid gap-2">
           <span className="text-xs font-semibold text-zinc-800">Județ</span>
           <input
@@ -157,7 +157,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </label>
       </div>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+      <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
         <div className="rounded-2xl bg-zinc-50 p-4">
           <div className="text-xs font-semibold text-zinc-700">RON/mp</div>
           <div className="mt-2 text-2xl font-semibold tracking-tight text-zinc-900">
@@ -174,7 +174,7 @@ export function PriceEstimator({ compact }: { compact?: boolean }) {
         </div>
       </div>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+      <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
         <Link
           href={whatsappHref(CONTACT_NUMBERS[0].e164, message)}
           target="_blank"
