@@ -1,3 +1,5 @@
+import { CONTACT_NUMBERS } from "./whatsapp";
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -34,7 +36,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Cum ceri ofertă rapid\n" +
       "1) Intră în **Calculator** și alege: tip spumă (celulă deschisă/închisă), grosime și m².\n" +
       "2) Completează **județul** și **localitatea**.\n" +
-      "3) Trimite pe WhatsApp către Marian sau Ana (mesajul se completează automat).\n\n" +
+      "3) Trimite pe WhatsApp către " +
+      CONTACT_NUMBERS[0].label +
+      " sau " +
+      CONTACT_NUMBERS[1].label +
+      " (mesajul se completează automat).\n\n" +
       "Vezi și: Servicii, Portofoliu, Calculator, Contact.",
   },
   {
@@ -94,7 +100,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "Izotehno se ocupă de **izolații cu spumă poliuretanică** (celulă deschisă / celulă închisă), iar partea de materiale tipărite și semnalizare te ajută să ai un proiect mai bine organizat și mai ușor de urmărit.\n\n" +
       "## Recomandare practică\n" +
       "Dacă ai o lucrare în derulare și vrei să arate profesionist, merită să pregătești din timp: un banner, un panou cu datele de contact și autocolante pentru echipamente.\n\n" +
-      "Vrei ofertă pentru izolație cu spumă poliuretanică? Intră în Calculator și trimite detaliile pe WhatsApp (Marian/Ana).",
+      "Vrei ofertă pentru izolație cu spumă poliuretanică? Intră în Calculator și trimite detaliile pe WhatsApp (" +
+      CONTACT_NUMBERS[0].label +
+      "/" +
+      CONTACT_NUMBERS[1].label +
+      ").",
   },
   {
     slug: "euprint-ro-productie-publicitara-bannere-autocolante-canvas",
@@ -126,7 +136,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Legătura cu lucrările Izotehno\n" +
       "La izolații cu spumă poliuretanică (celulă deschisă/închisă), o comunicare bună și o prezentare clară ajută clientul să știe rapid ce primește și cum ne contactează. Materialele tipărite completează partea de execuție.\n\n" +
       "## Recomandare\n" +
-      "Dacă pregătești o lucrare, pune pe listă și partea de semnalizare/branding (banner + date de contact). Pentru ofertă de izolație, intră în Calculator și trimite detaliile pe WhatsApp (Marian/Ana).",
+      "Dacă pregătești o lucrare, pune pe listă și partea de semnalizare/branding (banner + date de contact). Pentru ofertă de izolație, intră în Calculator și trimite detaliile pe WhatsApp (" +
+      CONTACT_NUMBERS[0].label +
+      "/" +
+      CONTACT_NUMBERS[1].label +
+      ").",
   },
   {
     slug: "adbanner-ro-print-digital-bannere-autocolante-canvas",
@@ -157,7 +171,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "- roll-up pentru prezentări și întâlniri\n\n" +
       "## Legătura cu lucrările Izotehno\n" +
       "În proiectele de izolații cu spumă poliuretanică (celulă deschisă/închisă), comunicarea clară ajută clientul: unde se lucrează, cum ne contactează și ce primește. Materialele de print completează partea de execuție.\n\n" +
-      "Vrei ofertă pentru izolație? Intră în Calculator și trimite detaliile pe WhatsApp (Marian/Ana).",
+      "Vrei ofertă pentru izolație? Intră în Calculator și trimite detaliile pe WhatsApp (" +
+      CONTACT_NUMBERS[0].label +
+      "/" +
+      CONTACT_NUMBERS[1].label +
+      ").",
   },
   {
     slug: "e-web-ro-agentie-web-nextjs-magazine-online-automatizari-ai",
@@ -203,18 +221,26 @@ export const BLOG_POSTS: BlogPost[] = [
       "- lucrări pentru pereți, planșee/tavane, structuri din lemn, etanșări\n" +
       "- estimare rapidă (RON/mp și total) + ofertă finală după detalii\n\n" +
       "## Elemente utile pe șantier (producție publicitară)\n" +
-      "- panou cu date de contact (WhatsApp Marian/Ana)\n" +
+      "- panou cu date de contact (WhatsApp " +
+      CONTACT_NUMBERS[0].label +
+      "/" +
+      CONTACT_NUMBERS[1].label +
+      ")\n" +
       "- marcaje pentru zone de acces și avertizare\n" +
       "- etichete și autocolante pentru echipamente\n" +
       "- banner/mesh pentru identificare și informare\n\n" +
       "## Partener: shopprint.ro\n" +
       "Pentru aceste materiale colaborăm cu **shopprint.ro** (producție publicitară), ca să avem livrare rapidă și calitate constantă.\n\n" +
       "## Cum ceri ofertă rapid\n" +
-      "Intră în **Calculator**, completează tipul, grosimea și m², adaugă județ/localitate și trimite pe WhatsApp către Marian sau Ana.",
+      "Intră în **Calculator**, completează tipul, grosimea și m², adaugă județ/localitate și trimite pe WhatsApp către " +
+      CONTACT_NUMBERS[0].label +
+      " sau " +
+      CONTACT_NUMBERS[1].label +
+      ".",
   },
   {
     slug: "cum-soliciti-oferta-rapid-pe-whatsapp",
-    title: "Cum soliciți oferta rapid pe WhatsApp (Marian/Ana) — checklist complet",
+    title: `Cum soliciți oferta rapid pe WhatsApp (${CONTACT_NUMBERS[0].label}/${CONTACT_NUMBERS[1].label}) — checklist complet`,
     excerpt:
       "Checklist simplu: ce informații să trimiți ca să primești răspuns rapid și o ofertă corectă.",
     dateISO: "2026-04-15",
@@ -232,8 +258,12 @@ export const BLOG_POSTS: BlogPost[] = [
       "- 2–3 poze cu zona (dacă ai)\n\n" +
       "## Cel mai rapid mod (recomandat)\n" +
       "Intră în **Calculator**, completează datele (inclusiv județ + localitate) și apasă:\n" +
-      "- \"Trimite (Marian)\" sau\n" +
-      "- \"Trimite (Ana)\"\n" +
+      "- \"Trimite (" +
+      CONTACT_NUMBERS[0].label +
+      ")\" sau\n" +
+      "- \"Trimite (" +
+      CONTACT_NUMBERS[1].label +
+      ")\"\n" +
       "Mesajul se completează automat cu estimarea.\n\n" +
       "## Ce servicii oferim\n" +
       "- izolații cu spumă poliuretanică (celulă deschisă/închisă)\n" +

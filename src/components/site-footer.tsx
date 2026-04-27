@@ -52,18 +52,22 @@ export function SiteFooter() {
             <ul className="grid gap-2 text-sm text-slate-600">
               <li>
                 <span className="font-medium text-slate-900">Telefon:</span>{" "}
-                <a className="transition hover:text-slate-900" href="tel:+40763889348">
-                  0763 889 348
-                </a>
-                {" · "}
-                <a className="transition hover:text-slate-900" href="tel:+40762710101">
-                  0762 710 101
-                </a>
+                {CONTACT_NUMBERS.map((n, i) => (
+                  <span key={n.e164}>
+                    {i > 0 ? " · " : null}
+                    <a
+                      className="transition hover:text-slate-900"
+                      href={`tel:+${n.e164}`}
+                    >
+                      {n.label}: {n.raw}
+                    </a>
+                  </span>
+                ))}
               </li>
               <li>
                 <span className="font-medium text-slate-900">Email:</span>{" "}
-                <a className="transition hover:text-slate-900" href="mailto:oferta@izotehno.ro">
-                  oferta@izotehno.ro
+                <a className="transition hover:text-slate-900" href="mailto:contact@izotehno.ro">
+                  contact@izotehno.ro
                 </a>
               </li>
               <li className="pt-1">

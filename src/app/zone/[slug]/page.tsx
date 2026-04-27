@@ -21,7 +21,7 @@ export async function generateMetadata({
   const title = `Izolații spumă poliuretanică ${loc.name}`;
   const description =
     `${loc.shortIntro} ` +
-    "Calculator estimativ, contact rapid pe WhatsApp (Marian/Ana) și ofertă în funcție de m² și grosime.";
+    `Calculator estimativ, contact rapid pe WhatsApp (${CONTACT_NUMBERS[0].label}/${CONTACT_NUMBERS[1].label}) și ofertă în funcție de m² și grosime.`;
 
   return {
     title,
@@ -78,7 +78,7 @@ export default async function ZonaPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
               >
-                WhatsApp Ana
+                WhatsApp {CONTACT_NUMBERS[0].label}
               </Link>
               <Link
                 href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
@@ -86,7 +86,7 @@ export default async function ZonaPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
               >
-                WhatsApp Marian
+                WhatsApp {CONTACT_NUMBERS[1].label}
               </Link>
             </div>
 

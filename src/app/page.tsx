@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/container";
 import { PriceEstimator } from "@/components/price-estimator";
 import { PortfolioStrip } from "@/components/portfolio-strip";
+import { CONTACT_NUMBERS } from "@/components/whatsapp";
 
 function CheckIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide text-white">
                 <SparkIcon className="h-4 w-4" />
-                Ofertă rapidă pe WhatsApp (Marian / Ana)
+                Ofertă rapidă pe WhatsApp ({CONTACT_NUMBERS[0].label} / {CONTACT_NUMBERS[1].label})
               </div>
               <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
                 Izolații cu spumă poliuretanică, moderne și profesionale
@@ -97,7 +98,9 @@ export default function Home() {
             className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
             <div className="text-sm font-semibold text-slate-900">Contact rapid</div>
-            <p className="mt-3 text-sm leading-6 text-slate-600">Marian sau Ana, direct pe WhatsApp.</p>
+            <p className="mt-3 text-sm leading-6 text-slate-600">
+              {CONTACT_NUMBERS[0].label} sau {CONTACT_NUMBERS[1].label}, direct pe WhatsApp.
+            </p>
             <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sky-700">Contactează →</div>
           </Link>
 

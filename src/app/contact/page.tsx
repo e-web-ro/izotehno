@@ -2,14 +2,6 @@ import Link from "next/link";
 import { Container } from "@/components/container";
 import { CONTACT_NUMBERS, whatsappHref } from "@/components/whatsapp";
 
-function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.92a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.63 2.2Z" />
-    </svg>
-  );
-}
-
 function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
@@ -64,7 +56,7 @@ export default function ContactPage() {
                 Contact rapid și ofertă personalizată
               </h1>
               <p className="mt-5 text-base leading-7 text-white/85 sm:text-lg">
-                Alege Marian sau Ana și trimite detaliile pe WhatsApp. Suntem gata să îți răspundem rapid și să îți oferim estimare clară.
+                Alege {CONTACT_NUMBERS[0].label} sau {CONTACT_NUMBERS[1].label} și trimite detaliile pe WhatsApp. Suntem gata să îți răspundem rapid și să îți oferim estimare clară.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
@@ -73,7 +65,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-600/10 transition hover:bg-slate-100"
                 >
-                  Scrie lui Marian
+                  WhatsApp — {CONTACT_NUMBERS[0].label}
                 </Link>
                 <Link
                   href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
@@ -81,7 +73,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
                 >
-                  Scrie Anei
+                  WhatsApp — {CONTACT_NUMBERS[1].label}
                 </Link>
               </div>
             </div>
@@ -144,7 +136,7 @@ export default function ContactPage() {
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700"
               >
                 <WhatsAppIcon className="h-5 w-5" />
-                Trimite (Marian)
+                Trimite ({CONTACT_NUMBERS[0].label})
               </Link>
               <Link
                 href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
@@ -153,7 +145,7 @@ export default function ContactPage() {
                 className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100"
               >
                 <WhatsAppIcon className="h-5 w-5 text-emerald-700" />
-                Trimite (Ana)
+                Trimite ({CONTACT_NUMBERS[1].label})
               </Link>
             </div>
 

@@ -101,7 +101,7 @@ export default function ServiciiPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl bg-black/20 px-4 py-3 text-sm font-semibold text-white hover:bg-black/25"
                 >
-                  Marian
+                  {CONTACT_NUMBERS[0].label}
                 </Link>
                 <Link
                   href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
@@ -109,7 +109,7 @@ export default function ServiciiPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl bg-black/20 px-4 py-3 text-sm font-semibold text-white hover:bg-black/25"
                 >
-                  Ana
+                  {CONTACT_NUMBERS[1].label}
                 </Link>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function ServiciiPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-4 py-3 text-sm font-semibold text-white hover:from-emerald-700 hover:to-sky-700"
                 >
-                  Marian
+                  {CONTACT_NUMBERS[0].label}
                 </Link>
                 <Link
                   href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
@@ -243,7 +243,7 @@ export default function ServiciiPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100"
                 >
-                  Ana
+                  {CONTACT_NUMBERS[1].label}
                 </Link>
               </div>
             </div>

@@ -142,7 +142,7 @@ export default function CalculatorPage() {
                   rel="noopener noreferrer"
                   className="inline-flex flex-1 items-center justify-center rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-zinc-900 hover:bg-white/90"
                 >
-                  Marian
+                  {CONTACT_NUMBERS[0].label}
                 </Link>
                 <Link
                   href={whatsappHref(CONTACT_NUMBERS[1].e164, message)}
@@ -150,7 +150,7 @@ export default function CalculatorPage() {
                   rel="noopener noreferrer"
                   className="inline-flex flex-1 items-center justify-center rounded-2xl border border-white/25 bg-white/10 px-4 py-3 text-sm font-semibold text-white hover:bg-white/15"
                 >
-                  Ana
+                  {CONTACT_NUMBERS[1].label}
                 </Link>
               </div>
             </div>
@@ -385,7 +385,7 @@ export default function CalculatorPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:from-emerald-700 hover:to-sky-700"
                   >
-                    Trimite (Marian)
+                    Trimite ({CONTACT_NUMBERS[0].label})
                   </Link>
                   <Link
                     href={whatsappHref(CONTACT_NUMBERS[1].e164, message)}
@@ -393,7 +393,7 @@ export default function CalculatorPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
                   >
-                    Trimite (Ana)
+                    Trimite ({CONTACT_NUMBERS[1].label})
                   </Link>
                 </div>
 
