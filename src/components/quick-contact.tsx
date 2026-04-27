@@ -49,24 +49,41 @@ export function QuickContact() {
             </div>
             <div className="grid gap-1 p-2">
               {CONTACT_NUMBERS.map((n) => (
-                <Link
+                <div
                   key={n.e164}
-                  href={whatsappHref(n.e164, text)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+                  className="rounded-xl border border-black/5 bg-white px-3 py-2"
                 >
-                  <span className="inline-flex items-center gap-2">
-                    <span className="grid size-8 place-items-center rounded-xl bg-emerald-600 text-white">
-                      <WhatsAppIcon className="size-4" />
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900">
+                      <span className="grid size-8 place-items-center rounded-xl bg-emerald-600 text-white">
+                        <WhatsAppIcon className="size-4" />
+                      </span>
+                      {n.label}
                     </span>
-                    {n.label}
-                  </span>
-                  <span className="text-xs font-medium text-zinc-500">
-                    {n.raw}
-                  </span>
-                </Link>
+                    <span className="text-xs font-medium text-zinc-500">
+                      {n.raw}
+                    </span>
+                  </div>
+
+                  <div className="mt-2 grid grid-cols-2 gap-2">
+                    <Link
+                      href={whatsappHref(n.e164, text)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-3 py-2 text-xs font-semibold text-white hover:bg-emerald-700"
+                    >
+                      WhatsApp
+                    </Link>
+                    <a
+                      href={`tel:+${n.e164}`}
+                      onClick={() => setOpen(false)}
+                      className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white px-3 py-2 text-xs font-semibold text-zinc-900 hover:bg-zinc-50"
+                    >
+                      Sună
+                    </a>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

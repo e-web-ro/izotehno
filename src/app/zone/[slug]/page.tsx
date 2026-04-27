@@ -78,7 +78,7 @@ export default async function ZonaPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
               >
-                WhatsApp Marian
+                WhatsApp Ana
               </Link>
               <Link
                 href={whatsappHref(CONTACT_NUMBERS[1].e164, text)}
@@ -86,7 +86,7 @@ export default async function ZonaPage({
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
               >
-                WhatsApp Ana
+                WhatsApp Marian
               </Link>
             </div>
 
